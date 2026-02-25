@@ -1,0 +1,5 @@
+SELECT DATE_TRUNC('month', date),
+COUNT(DISTINCT(bracelet_id))
+FROM pizza
+WHERE EXTRACT(month FROM date) IN (1,2,3)
+GROUP BY DATE_TRUNC('month', date)
