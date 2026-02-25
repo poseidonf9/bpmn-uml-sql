@@ -1,0 +1,5 @@
+SELECT date,
+COUNT(DISTINCT(bracelet_id))
+FROM pizza
+WHERE EXTRACT(month FROM date) = 3
+GROUP BY date
