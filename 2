@@ -1,0 +1,5 @@
+SELECT name,
+AVG(price*quantity)
+FROM pizza
+GROUP BY name
+ORDER BY AVG(price*quantity) DESC
