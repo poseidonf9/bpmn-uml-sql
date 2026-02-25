@@ -1,0 +1,4 @@
+SELECT EXTRACT(week FROM date),
+COUNT(DISTINCT(bracelet_id))
+FROM pizza
+GROUP BY EXTRACT(week FROM date)
