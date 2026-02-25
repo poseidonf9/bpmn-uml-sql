@@ -1,0 +1,5 @@
+SELECT  vegan_marker,
+AVG(price*quantity)
+FROM pizza
+WHERE cheese_side = 0
+GROUP BY vegan_marker
