@@ -1,0 +1,6 @@
+SELECT name,
+cheese_side,
+AVG(price*quantity)
+FROM pizza
+GROUP BY name, cheese_side
+ORDER BY name, cheese_side 
