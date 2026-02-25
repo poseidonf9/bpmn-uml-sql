@@ -1,0 +1,7 @@
+SELECT name,
+radius,
+COUNT(DISTINCT(bracelet_id))/1000  ::numeric AS konv
+FROM pizza
+WHERE bracelet_id NOT IN (145738, 145759, 145773, 145807, 145815, 145821, 145873, 145880)
+GROUP BY name, radius
+HAVING COUNT(DISTINCT(bracelet_id))/1000  ::numeric > 0.03
