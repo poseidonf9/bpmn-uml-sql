@@ -1,0 +1,5 @@
+SELECT EXTRACT(day FROM date),
+SUM(price*quantity)/COUNT(DISTINCT(bracelet_id)) :: numeric
+FROM pizza
+WHERE EXTRACT(month FROM date) = 1
+GROUP BY EXTRACT(day FROM date)
